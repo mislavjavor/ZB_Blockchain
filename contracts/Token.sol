@@ -5,7 +5,6 @@ contract Token {
 
     mapping (address => uint) _balances;
 
-
     constructor() public {
         _balances[msg.sender] = 1000000;
     }
