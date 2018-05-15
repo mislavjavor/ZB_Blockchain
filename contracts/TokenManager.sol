@@ -1,6 +1,6 @@
 pragma solidity 0.4.23;
 
-import "./Token.sol";
+import "./AbsToken.sol";
 
 
 contract TokenManager {
