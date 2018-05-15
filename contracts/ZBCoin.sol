@@ -4,11 +4,11 @@ import "./AbsToken.sol";
 
 
 
-contract Token is AbsToken {
+contract ZBCoin is AbsToken {
 
     mapping (address => uint) _balances;
 
-    uint private TOTAL_SUPPLY = 1 000 000;
+    uint private TOTAL_SUPPLY = 2 000 000;
 
     constructor() public {
         _balances[msg.sender] = TOTAL_SUPPLY;

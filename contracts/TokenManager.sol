@@ -5,7 +5,7 @@ import "./Token.sol";
 
 contract TokenManager {
 
-    Token[] private _managedTokens;
+    AbsToken[] private _managedTokens;
     address private _owner;
 
     constructor(Token initialToken) public {
@@ -19,7 +19,7 @@ contract TokenManager {
     }
 
 
-    function getToken(uint position) public constant returns (Token) {
+    function getToken(uint position) public constant returns (AbsToken) {
         require(address(_managedTokens[position]) != address(0)); // Token exists
         return _managedTokens[position];
     }
