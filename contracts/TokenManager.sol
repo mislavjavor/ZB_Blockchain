@@ -8,12 +8,12 @@ contract TokenManager {
     AbsToken[] private _managedTokens;
     address private _owner;
 
-    constructor(Token initialToken) public {
+    constructor(AbsToken initialToken) public {
         _managedTokens.push(initialToken);
         _owner = msg.sender;
     }
 
-    function addNewToken(Token newToken) public {
+    function addNewToken(AbsToken newToken) public {
         require(msg.sender == _owner);
         _managedTokens.push(newToken);
     }

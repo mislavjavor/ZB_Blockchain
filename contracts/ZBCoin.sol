@@ -8,7 +8,7 @@ contract ZBCoin is AbsToken {
 
     mapping (address => uint) _balances;
 
-    uint private TOTAL_SUPPLY = 2 000 000;
+    uint private TOTAL_SUPPLY = 2000000;
 
     constructor() public {
         _balances[msg.sender] = TOTAL_SUPPLY;

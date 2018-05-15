@@ -8,7 +8,7 @@ contract Token is AbsToken {
 
     mapping (address => uint) _balances;
 
-    uint private TOTAL_SUPPLY = 1 000 000;
+    uint private TOTAL_SUPPLY = 1000000;
 
     constructor() public {
         _balances[msg.sender] = TOTAL_SUPPLY;
