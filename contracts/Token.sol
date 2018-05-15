@@ -19,11 +19,12 @@ contract Token is AbsToken {
     }
 
     function transfer(address to, uint amount) public {
-
         require(_balances[msg.sender] > amount);
 
         _balances[msg.sender] -= amount;
         _balances[to] += amount;
+
+        emit LogTransfer(msg.sender, to, amount);
     }
 
     function getBalance(address account) public constant returns (uint) {

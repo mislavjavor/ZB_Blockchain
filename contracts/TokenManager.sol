@@ -18,7 +18,6 @@ contract TokenManager {
         _managedTokens.push(newToken);
     }
 
-
     function getToken(uint position) public constant returns (AbsToken) {
         require(address(_managedTokens[position]) != address(0)); // Token exists
         return _managedTokens[position];
