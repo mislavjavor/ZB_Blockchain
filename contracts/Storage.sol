@@ -10,7 +10,7 @@ contract Storage {
     function addNew(uint value) public {
         _store.push(value);
 
-        emit LogAddedUint(_store.length - 1, value);
+        emit LogAddedUint(_store.length, value);
     }
 
     function getInt(uint position) public constant returns (uint) {
